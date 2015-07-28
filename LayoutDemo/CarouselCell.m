@@ -7,18 +7,25 @@
 //
 
 #import "CarouselCell.h"
+#import "CarouselViewLayout.h"
 
 @implementation CarouselCell
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame:frame]) {
-        self.imageView = [[UIImageView alloc] initWithFrame:self.bounds];
-        self.imageView.contentMode = UIViewContentModeScaleAspectFill;
-        [self addSubview:self.imageView];
-        self.imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        self.clipsToBounds = YES;
-    }
-    return self;
+    return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil].firstObject;
+}
+
+- (void)applyLayoutAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes {
+    self.maskView.alpha = layoutAttributes.alpha;
+    self.alpha = 1.0f;
+}
+
+- (void)awakeFromNib {
+    self.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.bounds].CGPath;
+    self.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.layer.shadowOffset = CGSizeMake(0, 0);
+    self.layer.shadowRadius = 4;
+    self.layer.shadowOpacity = 0.3;
 }
 
 @end

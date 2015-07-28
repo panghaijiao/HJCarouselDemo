@@ -10,7 +10,7 @@
 
 @interface CarouselViewLayout () {
     CGFloat height;
-    CGFloat halfHeiht;
+    CGSize  itemSize;
 }
 
 @end
@@ -20,21 +20,23 @@
 - (void)prepareLayout {
     [super prepareLayout];
     height = CGRectGetHeight(self.collectionView.frame);
-    halfHeiht = height / 2;
-    self.collectionView.contentInset = UIEdgeInsetsMake(halfHeiht - 150, 0, halfHeiht - 150, 0);
+    itemSize = CGSizeMake(320, 400);
+    self.collectionView.contentInset = UIEdgeInsetsMake((height - itemSize.height) / 2, 0, (height - itemSize.height) / 2, 0);
 }
 
-- (CGSize)collectionViewContentSize
-{
+- (CGSize)collectionViewContentSize {
     NSInteger cellCount = [self.collectionView numberOfItemsInSection:0];
-    return CGSizeMake(CGRectGetWidth(self.collectionView.frame), cellCount * 300);
+    return CGSizeMake(CGRectGetWidth(self.collectionView.frame), cellCount * itemSize.height);
 }
 
-- (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect
-{
+- (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect {
     NSInteger cellCount = [self.collectionView numberOfItemsInSection:0];
+    CGFloat centerY = self.collectionView.contentOffset.y + height / 2;
+    NSInteger index = centerY / itemSize.height;
+    NSInteger minIndex = MAX(0, (index - 2));
+    NSInteger maxIndex = MIN((cellCount - 1), (index + 2));
     NSMutableArray *array = [NSMutableArray array];
-    for (int i = 0; i < cellCount; i++) {
+    for (NSInteger i = minIndex; i <= maxIndex; i++) {
         NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
         UICollectionViewLayoutAttributes *attributes = [self layoutAttributesForItemAtIndexPath:indexPath];
         [array addObject:attributes];
@@ -42,26 +44,44 @@
     return array;
 }
 
-- (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
-    attributes.size = CGSizeMake(280, 300);
-    CGFloat centerY = 150 + 300 * indexPath.row;
-    attributes.center = CGPointMake(CGRectGetWidth(self.collectionView.frame) / 2, centerY);
+    attributes.size = itemSize;
+    
+    CGFloat cY = self.collectionView.contentOffset.y + height / 2;
+    CGFloat attributesY = itemSize.height * indexPath.row + itemSize.height / 2;
+    attributes.zIndex = -ABS(attributesY - cY);
+  
+    CGFloat delta = cY - attributesY;
+    CGFloat ratio =  - delta / (itemSize.height * 2);
+    CGFloat scale = 1 - ABS(delta) / (itemSize.height * 6.0) * cos(ratio * M_PI_4);
+    CGFloat centerX = CGRectGetWidth(self.collectionView.frame) / 2;
+    CGFloat centerY = cY + sin(ratio * M_PI_2) * 100;
+//    if (delta > 0 && delta <= itemSize.height / 2) {
+//        CGRect rect = attributes.frame;
+//        rect.origin.x = centerX - itemSize.width * scale / 2;
+//        rect.origin.y = centerY - itemSize.height * scale / 2;
+//        rect.size.width = itemSize.width * scale;
+//        CGFloat param = delta / (itemSize.height / 2);
+//        rect.size.height = itemSize.height * scale * (1 - param) + sin(0.25 * M_PI_2) * 100 * 2 * param;
+//        attributes.frame = rect;
+//    } else {
+        attributes.transform3D = CATransform3DMakeScale(scale, scale, 1);
+        attributes.center = CGPointMake(centerX, centerY);
+//    }
+    attributes.alpha = 1 - scale;
     return attributes;
 }
 
 - (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity {
     CGPoint targetContentOffset = proposedContentOffset;
-    CGFloat index = floorf((proposedContentOffset.y - 150 + halfHeiht) / 300.0f);
+    CGFloat index = floorf((proposedContentOffset.y + height / 2 - itemSize.height / 2) / itemSize.height);
     index = MAX(0, index);
-    targetContentOffset.y = -halfHeiht + 150 + 300 * index;
-    NSLog(@"%f", targetContentOffset.y);
+    targetContentOffset.y = itemSize.height * index + itemSize.height / 2 - height / 2;
     return targetContentOffset;
 }
 
-- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds
-{
+- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
     return !CGRectEqualToRect(newBounds, self.collectionView.bounds);
 }
 

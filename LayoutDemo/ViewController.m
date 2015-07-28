@@ -28,6 +28,7 @@
     self.collectionView.dataSource = self;
     self.collectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self.view addSubview:self.collectionView];
+    self.collectionView.showsVerticalScrollIndicator = NO;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -39,13 +40,14 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 10;
+    return 20;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CarouselCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     NSString *imageName = [NSString stringWithFormat:@"%ld.jpg", indexPath.row%3];
     cell.imageView.image = [UIImage imageNamed:imageName];
+    cell.lblView.text = [@(indexPath.row) stringValue];
     return cell;
 }
 

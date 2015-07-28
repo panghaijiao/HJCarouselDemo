@@ -10,6 +10,8 @@
 
 @interface CarouselCell : UICollectionViewCell
 
-@property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, strong) IBOutlet UIView      *maskView;
+@property (nonatomic, strong) IBOutlet UIImageView *imageView;
+@property (nonatomic, strong) IBOutlet UILabel     *lblView;
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A06B068D1B67325E0039237B /* CarouselCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A06B068C1B67325E0039237B /* CarouselCell.xib */; };
 		A0A76F461B623B15005E9273 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A76F451B623B15005E9273 /* main.m */; };
 		A0A76F491B623B15005E9273 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A76F481B623B15005E9273 /* AppDelegate.m */; };
 		A0A76F4C1B623B15005E9273 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A76F4B1B623B15005E9273 /* ViewController.m */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A06B068C1B67325E0039237B /* CarouselCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarouselCell.xib; sourceTree = "<group>"; };
 		A0A76F401B623B15005E9273 /* LayoutDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LayoutDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0A76F441B623B15005E9273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0A76F451B623B15005E9273 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				A0A76F4B1B623B15005E9273 /* ViewController.m */,
 				A0A76F6C1B623C44005E9273 /* CarouselCell.h */,
 				A0A76F6D1B623C44005E9273 /* CarouselCell.m */,
+				A06B068C1B67325E0039237B /* CarouselCell.xib */,
 				A0A76F691B623B73005E9273 /* CarouselViewLayout.h */,
 				A0A76F6A1B623B73005E9273 /* CarouselViewLayout.m */,
 				A0A76F4D1B623B15005E9273 /* Main.storyboard */,
@@ -221,6 +224,7 @@
 				A0A76F741B623D16005E9273 /* 2.jpg in Resources */,
 				A0A76F721B623D16005E9273 /* 0.jpg in Resources */,
 				A0A76F4F1B623B15005E9273 /* Main.storyboard in Resources */,
+				A06B068D1B67325E0039237B /* CarouselCell.xib in Resources */,
 				A0A76F541B623B15005E9273 /* LaunchScreen.xib in Resources */,
 				A0A76F511B623B15005E9273 /* Images.xcassets in Resources */,
 				A0A76F731B623D16005E9273 /* 1.jpg in Resources */,
@@ -442,6 +446,7 @@
 				A0A76F651B623B15005E9273 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A0A76F661B623B15005E9273 /* Build configuration list for PBXNativeTarget "LayoutDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +455,7 @@
 				A0A76F681B623B15005E9273 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
