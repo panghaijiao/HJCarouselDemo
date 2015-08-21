@@ -1,0 +1,367 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A0E02B441B85A3DF000CCD8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E02B431B85A3DF000CCD8B /* main.m */; };
+		A0E02B471B85A3DF000CCD8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E02B461B85A3DF000CCD8B /* AppDelegate.m */; };
+		A0E02B4D1B85A3DF000CCD8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0E02B4B1B85A3DF000CCD8B /* Main.storyboard */; };
+		A0E02B4F1B85A3DF000CCD8B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0E02B4E1B85A3DF000CCD8B /* Images.xcassets */; };
+		A0E02B521B85A3DF000CCD8B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0E02B501B85A3DF000CCD8B /* LaunchScreen.xib */; };
+		A0E02B691B85A4EF000CCD8B /* HJCarouselViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E02B681B85A4EF000CCD8B /* HJCarouselViewLayout.m */; };
+		A0E02B6E1B85A5E4000CCD8B /* HJCarouselViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E02B6C1B85A5E4000CCD8B /* HJCarouselViewCell.m */; };
+		A0E02B6F1B85A5E4000CCD8B /* HJCarouselViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0E02B6D1B85A5E4000CCD8B /* HJCarouselViewCell.xib */; };
+		A0E02B761B85B0AE000CCD8B /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E02B751B85B0AE000CCD8B /* MenuTableViewController.m */; };
+		A0E02B7F1B85B965000CCD8B /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E02B7E1B85B965000CCD8B /* CollectionViewController.m */; };
+		A0E02B831B85BBE1000CCD8B /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0E02B801B85BBE1000CCD8B /* 0.jpg */; };
+		A0E02B841B85BBE1000CCD8B /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0E02B811B85BBE1000CCD8B /* 1.jpg */; };
+		A0E02B851B85BBE1000CCD8B /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0E02B821B85BBE1000CCD8B /* 2.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A0E02B3E1B85A3DF000CCD8B /* HJCarouselDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HJCarouselDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0E02B421B85A3DF000CCD8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0E02B431B85A3DF000CCD8B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A0E02B451B85A3DF000CCD8B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A0E02B461B85A3DF000CCD8B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A0E02B4C1B85A3DF000CCD8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A0E02B4E1B85A3DF000CCD8B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A0E02B511B85A3DF000CCD8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		A0E02B5C1B85A3DF000CCD8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0E02B5D1B85A3DF000CCD8B /* HJCarouselDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HJCarouselDemoTests.m; sourceTree = "<group>"; };
+		A0E02B671B85A4EF000CCD8B /* HJCarouselViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJCarouselViewLayout.h; sourceTree = "<group>"; };
+		A0E02B681B85A4EF000CCD8B /* HJCarouselViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJCarouselViewLayout.m; sourceTree = "<group>"; };
+		A0E02B6B1B85A5E4000CCD8B /* HJCarouselViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJCarouselViewCell.h; sourceTree = "<group>"; };
+		A0E02B6C1B85A5E4000CCD8B /* HJCarouselViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJCarouselViewCell.m; sourceTree = "<group>"; };
+		A0E02B6D1B85A5E4000CCD8B /* HJCarouselViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HJCarouselViewCell.xib; sourceTree = "<group>"; };
+		A0E02B741B85B0AE000CCD8B /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
+		A0E02B751B85B0AE000CCD8B /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
+		A0E02B7D1B85B965000CCD8B /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		A0E02B7E1B85B965000CCD8B /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		A0E02B801B85BBE1000CCD8B /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = SOURCE_ROOT; };
+		A0E02B811B85BBE1000CCD8B /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = SOURCE_ROOT; };
+		A0E02B821B85BBE1000CCD8B /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A0E02B3B1B85A3DF000CCD8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A0E02B351B85A3DF000CCD8B = {
+			isa = PBXGroup;
+			children = (
+				A0E02B401B85A3DF000CCD8B /* HJCarouselDemo */,
+				A0E02B5A1B85A3DF000CCD8B /* HJCarouselDemoTests */,
+				A0E02B3F1B85A3DF000CCD8B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A0E02B3F1B85A3DF000CCD8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A0E02B3E1B85A3DF000CCD8B /* HJCarouselDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A0E02B401B85A3DF000CCD8B /* HJCarouselDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A0E02B6A1B85A4F9000CCD8B /* HJCarouselViewLayout */,
+				A0E02B451B85A3DF000CCD8B /* AppDelegate.h */,
+				A0E02B461B85A3DF000CCD8B /* AppDelegate.m */,
+				A0E02B741B85B0AE000CCD8B /* MenuTableViewController.h */,
+				A0E02B751B85B0AE000CCD8B /* MenuTableViewController.m */,
+				A0E02B7D1B85B965000CCD8B /* CollectionViewController.h */,
+				A0E02B7E1B85B965000CCD8B /* CollectionViewController.m */,
+				A0E02B6B1B85A5E4000CCD8B /* HJCarouselViewCell.h */,
+				A0E02B6C1B85A5E4000CCD8B /* HJCarouselViewCell.m */,
+				A0E02B6D1B85A5E4000CCD8B /* HJCarouselViewCell.xib */,
+				A0E02B801B85BBE1000CCD8B /* 0.jpg */,
+				A0E02B811B85BBE1000CCD8B /* 1.jpg */,
+				A0E02B821B85BBE1000CCD8B /* 2.jpg */,
+				A0E02B4B1B85A3DF000CCD8B /* Main.storyboard */,
+				A0E02B4E1B85A3DF000CCD8B /* Images.xcassets */,
+				A0E02B501B85A3DF000CCD8B /* LaunchScreen.xib */,
+				A0E02B411B85A3DF000CCD8B /* Supporting Files */,
+			);
+			path = HJCarouselDemo;
+			sourceTree = "<group>";
+		};
+		A0E02B411B85A3DF000CCD8B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A0E02B421B85A3DF000CCD8B /* Info.plist */,
+				A0E02B431B85A3DF000CCD8B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A0E02B5A1B85A3DF000CCD8B /* HJCarouselDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				A0E02B5D1B85A3DF000CCD8B /* HJCarouselDemoTests.m */,
+				A0E02B5B1B85A3DF000CCD8B /* Supporting Files */,
+			);
+			path = HJCarouselDemoTests;
+			sourceTree = "<group>";
+		};
+		A0E02B5B1B85A3DF000CCD8B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A0E02B5C1B85A3DF000CCD8B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A0E02B6A1B85A4F9000CCD8B /* HJCarouselViewLayout */ = {
+			isa = PBXGroup;
+			children = (
+				A0E02B671B85A4EF000CCD8B /* HJCarouselViewLayout.h */,
+				A0E02B681B85A4EF000CCD8B /* HJCarouselViewLayout.m */,
+			);
+			name = HJCarouselViewLayout;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A0E02B3D1B85A3DF000CCD8B /* HJCarouselDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0E02B611B85A3DF000CCD8B /* Build configuration list for PBXNativeTarget "HJCarouselDemo" */;
+			buildPhases = (
+				A0E02B3A1B85A3DF000CCD8B /* Sources */,
+				A0E02B3B1B85A3DF000CCD8B /* Frameworks */,
+				A0E02B3C1B85A3DF000CCD8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HJCarouselDemo;
+			productName = HJCarouselDemo;
+			productReference = A0E02B3E1B85A3DF000CCD8B /* HJCarouselDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A0E02B361B85A3DF000CCD8B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = olinone;
+				TargetAttributes = {
+					A0E02B3D1B85A3DF000CCD8B = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = A0E02B391B85A3DF000CCD8B /* Build configuration list for PBXProject "HJCarouselDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A0E02B351B85A3DF000CCD8B;
+			productRefGroup = A0E02B3F1B85A3DF000CCD8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A0E02B3D1B85A3DF000CCD8B /* HJCarouselDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A0E02B3C1B85A3DF000CCD8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0E02B4D1B85A3DF000CCD8B /* Main.storyboard in Resources */,
+				A0E02B831B85BBE1000CCD8B /* 0.jpg in Resources */,
+				A0E02B851B85BBE1000CCD8B /* 2.jpg in Resources */,
+				A0E02B521B85A3DF000CCD8B /* LaunchScreen.xib in Resources */,
+				A0E02B841B85BBE1000CCD8B /* 1.jpg in Resources */,
+				A0E02B6F1B85A5E4000CCD8B /* HJCarouselViewCell.xib in Resources */,
+				A0E02B4F1B85A3DF000CCD8B /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A0E02B3A1B85A3DF000CCD8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0E02B7F1B85B965000CCD8B /* CollectionViewController.m in Sources */,
+				A0E02B471B85A3DF000CCD8B /* AppDelegate.m in Sources */,
+				A0E02B6E1B85A5E4000CCD8B /* HJCarouselViewCell.m in Sources */,
+				A0E02B691B85A4EF000CCD8B /* HJCarouselViewLayout.m in Sources */,
+				A0E02B761B85B0AE000CCD8B /* MenuTableViewController.m in Sources */,
+				A0E02B441B85A3DF000CCD8B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A0E02B4B1B85A3DF000CCD8B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A0E02B4C1B85A3DF000CCD8B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A0E02B501B85A3DF000CCD8B /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A0E02B511B85A3DF000CCD8B /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A0E02B5F1B85A3DF000CCD8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A0E02B601B85A3DF000CCD8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A0E02B621B85A3DF000CCD8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HJCarouselDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A0E02B631B85A3DF000CCD8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HJCarouselDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A0E02B391B85A3DF000CCD8B /* Build configuration list for PBXProject "HJCarouselDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0E02B5F1B85A3DF000CCD8B /* Debug */,
+				A0E02B601B85A3DF000CCD8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0E02B611B85A3DF000CCD8B /* Build configuration list for PBXNativeTarget "HJCarouselDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0E02B621B85A3DF000CCD8B /* Debug */,
+				A0E02B631B85A3DF000CCD8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A0E02B361B85A3DF000CCD8B /* Project object */;
+}

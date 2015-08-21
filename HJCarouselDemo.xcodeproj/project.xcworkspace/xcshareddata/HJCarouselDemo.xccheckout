@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C1A9CC94-3A6D-463A-9526-3157922600FA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HJCarouselDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>39694E38379DF36E4952B5DC53BBB09C087E2EE0</key>
+		<string>https://github.com/panghaijiao/HJCarouselDemo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HJCarouselDemo.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>39694E38379DF36E4952B5DC53BBB09C087E2EE0</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/panghaijiao/HJCarouselDemo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>39694E38379DF36E4952B5DC53BBB09C087E2EE0</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>39694E38379DF36E4952B5DC53BBB09C087E2EE0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HJCarouselDemo</string>
+		</dict>
+	</array>
+</dict>
+</plist>
