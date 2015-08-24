@@ -31,6 +31,11 @@
             layout = [[HJCarouselViewLayout alloc] initWithAnim:HJCarouselAnimDefault];
             layout.itemSize = CGSizeMake(250, 250);
             break;
+        case 1:
+            layout = [[HJCarouselViewLayout alloc] initWithAnim:HJCarouselAnimDefault];
+            layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+            layout.itemSize = CGSizeMake(250, 250);
+            break;
         default:
             break;
     }
