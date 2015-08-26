@@ -8,6 +8,8 @@
 
 #import "HJCarouselViewLayout.h"
 
+#define INTERSPACEPARAM  0.65
+
 @interface HJCarouselViewLayout () {
     CGFloat _viewHeight;
     CGFloat _itemHeight;
@@ -80,9 +82,47 @@
     attributes.transform = CGAffineTransformMakeScale(scale, scale);
     
     CGFloat centerY = attributesY;
-    if (self.carouselAnim == HJCarouselAnimCarousel) {
-        centerY = cY + sin(ratio * M_PI_2) * _itemHeight / 2;
+    switch (self.carouselAnim) {
+        case HJCarouselAnimRotary:
+            attributes.transform = CGAffineTransformRotate(attributes.transform, - ratio * M_PI_4);
+            centerY += sin(ratio * M_PI_2) * _itemHeight / 2;
+            break;
+        case HJCarouselAnimCarousel:
+            centerY = cY + sin(ratio * M_PI_2) * _itemHeight * INTERSPACEPARAM;
+            break;
+        case HJCarouselAnimCarousel1:
+            centerY = cY + sin(ratio * M_PI_2) * _itemHeight * INTERSPACEPARAM;
+            if (delta > 0 && delta <= _itemHeight / 2) {
+                attributes.transform = CGAffineTransformIdentity;
+                CGRect rect = attributes.frame;
+                if (self.scrollDirection == UICollectionViewScrollDirectionVertical) {
+                    rect.origin.x = CGRectGetWidth(self.collectionView.frame) / 2 - _itemSize.width * scale / 2;
+                    rect.origin.y = centerY - _itemHeight * scale / 2;
+                    rect.size.width = _itemSize.width * scale;
+                    CGFloat param = delta / (_itemHeight / 2);
+                    rect.size.height = _itemHeight * scale * (1 - param) + sin(0.25 * M_PI_2) * _itemHeight * INTERSPACEPARAM * 2 * param;
+                } else {
+                    rect.origin.x = centerY - _itemHeight * scale / 2;
+                    rect.origin.y = CGRectGetHeight(self.collectionView.frame) / 2 - _itemSize.height * scale / 2;
+                    rect.size.height = _itemSize.height * scale;
+                    CGFloat param = delta / (_itemHeight / 2);
+                    rect.size.width = _itemHeight * scale * (1 - param) + sin(0.25 * M_PI_2) * _itemHeight * INTERSPACEPARAM * 2 * param;
+                }
+                attributes.frame = rect;
+                return attributes;
+            }
+            break;
+        case HJCarouselAnimCoverFlow: {
+            CATransform3D transform = CATransform3DIdentity;
+            transform.m34 = -1.0/400.0f;
+            transform = CATransform3DRotate(transform, ratio * M_PI_4, 1, 0, 0);
+            attributes.transform3D = transform;
+        }
+            break;
+        default:
+            break;
     }
+    
     if (self.scrollDirection == UICollectionViewScrollDirectionVertical) {
         attributes.center = CGPointMake(CGRectGetWidth(self.collectionView.frame) / 2, centerY);
     } else {
@@ -94,13 +134,6 @@
 
 - (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity {
     CGFloat index = roundf(((self.scrollDirection == UICollectionViewScrollDirectionVertical ? proposedContentOffset.y : proposedContentOffset.x) + _viewHeight / 2 - _itemHeight / 2) / _itemHeight);
-    if (self.pageEnable) {
-        CGFloat rate = ABS(velocity.y);
-        if (rate > 1.0 && rate < 2.0) {
-            index = roundf(((self.scrollDirection == UICollectionViewScrollDirectionVertical ? self.collectionView.contentOffset.y : self.collectionView.contentOffset.x) + _viewHeight / 2 + _viewHeight / 2 - _itemHeight / 2) / _itemHeight);
-            index += velocity.y > 0 ? 1 : -1;
-        }
-    }
     if (self.scrollDirection == UICollectionViewScrollDirectionVertical) {
         proposedContentOffset.y = _itemHeight * index + _itemHeight / 2 - _viewHeight / 2;
     } else {

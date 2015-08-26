@@ -9,15 +9,19 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSUInteger, HJCarouselAnim) {
-    HJCarouselAnimLine,
+    HJCarouselAnimLinear,
+    HJCarouselAnimRotary,
     HJCarouselAnimCarousel,
+    HJCarouselAnimCarousel1,
+    HJCarouselAnimCoverFlow,
 };
 
 @interface HJCarouselViewLayout : UICollectionViewLayout
 
 - (instancetype)initWithAnim:(HJCarouselAnim)anim;
 
-@property (nonatomic) BOOL pageEnable;
+@property (readonly)  HJCarouselAnim carouselAnim;
+
 @property (nonatomic) CGSize itemSize;
 @property (nonatomic) NSInteger visibleCount;
 @property (nonatomic) UICollectionViewScrollDirection scrollDirection;
