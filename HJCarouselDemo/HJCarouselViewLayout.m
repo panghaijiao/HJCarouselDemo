@@ -79,7 +79,10 @@
     CGFloat scale = 1 - ABS(delta) / (_itemHeight * 6.0) * cos(ratio * M_PI_4);
     attributes.transform = CGAffineTransformMakeScale(scale, scale);
     
-    CGFloat centerY = cY + sin(ratio * M_PI_2) * _itemHeight / 2;
+    CGFloat centerY = attributesY;
+    if (self.carouselAnim == HJCarouselAnimCarousel) {
+        centerY = cY + sin(ratio * M_PI_2) * _itemHeight / 2;
+    }
     if (self.scrollDirection == UICollectionViewScrollDirectionVertical) {
         attributes.center = CGPointMake(CGRectGetWidth(self.collectionView.frame) / 2, centerY);
     } else {

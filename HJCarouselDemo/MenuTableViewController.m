@@ -28,11 +28,16 @@
     HJCarouselViewLayout *layout = nil;
     switch (indexPath.row) {
         case 0:
-            layout = [[HJCarouselViewLayout alloc] initWithAnim:HJCarouselAnimDefault];
+            layout = [[HJCarouselViewLayout alloc] initWithAnim:HJCarouselAnimLine];
+            layout.visibleCount = 3;
             layout.itemSize = CGSizeMake(250, 250);
             break;
         case 1:
-            layout = [[HJCarouselViewLayout alloc] initWithAnim:HJCarouselAnimDefault];
+            layout = [[HJCarouselViewLayout alloc] initWithAnim:HJCarouselAnimCarousel];
+            layout.itemSize = CGSizeMake(250, 250);
+            break;
+        case 2:
+            layout = [[HJCarouselViewLayout alloc] initWithAnim:HJCarouselAnimLine];
             layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
             layout.itemSize = CGSizeMake(250, 250);
             break;
@@ -45,7 +50,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -53,10 +58,16 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
-    if (indexPath.row == 0) {
-        cell.textLabel.text = @"Vertical";
-    } else {
-        cell.textLabel.text = @"Horizontal";
+    switch (indexPath.row) {
+        case 0:
+            cell.textLabel.text = @"Line";
+            break;
+        case 1:
+            cell.textLabel.text = @"Carousel";
+            break;
+        default:
+            cell.textLabel.text = @"Horizontal";
+            break;
     }
     return cell;
 }

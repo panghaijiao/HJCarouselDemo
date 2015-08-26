@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSUInteger, HJCarouselAnim) {
-    HJCarouselAnimDefault
+    HJCarouselAnimLine,
+    HJCarouselAnimCarousel,
 };
 
 @interface HJCarouselViewLayout : UICollectionViewLayout
